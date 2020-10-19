@@ -4,6 +4,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { UserOrdersTableComponent } from './user-orders-table/user-orders-table.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { MenuCardComponent } from './menu-card/menu-card.component';
 
 
 
@@ -12,7 +13,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     NavbarComponent,
     UserOrdersTableComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    MenuCardComponent
   ],
   imports: [
     CommonModule
@@ -21,7 +23,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     NavbarComponent,
     UserOrdersTableComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    MenuCardComponent
   ]
 })
 export class ComponentsModule { }
