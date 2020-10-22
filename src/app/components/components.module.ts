@@ -5,6 +5,7 @@ import { UserOrdersTableComponent } from './user-orders-table/user-orders-table.
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { MenuCardComponent } from './menu-card/menu-card.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -17,7 +18,8 @@ import { MenuCardComponent } from './menu-card/menu-card.component';
     MenuCardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     NavbarComponent,

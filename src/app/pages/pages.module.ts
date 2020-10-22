@@ -5,15 +5,19 @@ import { ComponentsModule } from '../components/components.module';
 import { PagesComponent } from './pages.component';
 import { RouterModule } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
+import { CreateOrderComponent } from './create-order/create-order.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
 @NgModule({
-  declarations: [DashboardComponent, PagesComponent, MenuComponent],
+  declarations: [DashboardComponent, PagesComponent, MenuComponent, CreateOrderComponent],
   imports: [
     CommonModule,
     RouterModule,
-    ComponentsModule
+    ComponentsModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class PagesModule { }

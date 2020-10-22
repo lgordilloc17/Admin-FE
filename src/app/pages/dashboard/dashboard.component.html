@@ -1,1 +1,15 @@
-<app-user-orders-table></app-user-orders-table>
+
+<div class="container container-narrow mt-5">
+
+    <h3>
+        {{actualDate | date : 'EEEE d'}} de {{actualDate | date : 'MMMM, yyyy'}}
+    </h3>
+    <hr>
+    
+    <app-user-orders-table></app-user-orders-table>
+    
+    <button type="button" class="agregar btn btn-success btn-circle btn-xl" [routerLink]="['/crear-orden']">
+        <i class="fas fa-plus"></i>
+    </button>
+</div>
+
