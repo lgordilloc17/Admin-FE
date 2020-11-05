@@ -7,11 +7,12 @@ import { RouterModule } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
 import { CreateOrderComponent } from './create-order/create-order.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 
 
 @NgModule({
-  declarations: [DashboardComponent, PagesComponent, MenuComponent, CreateOrderComponent],
+  declarations: [DashboardComponent, PagesComponent, MenuComponent, CreateOrderComponent, CreateUserComponent],
   imports: [
     CommonModule,
     RouterModule,

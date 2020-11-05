@@ -1,1 +1,65 @@
-create-order works
+<div class="container container-fluid mt-3">
+    <h2>
+        Crear Orden
+    </h2>
+    <hr>
+    <div class="form-group">
+        <label>Usuario</label>
+        <select [(ngModel)]="usuario" class="form-control" [disabled]="disabledUserField">
+            <option value="usuario1">usuario1</option>
+            <option value="usuario2">usuario2</option>
+            <option value="usuario3">usuario3</option>
+            <option value="usuario4">usuario4</option>
+            <option value="usuario5">usuario5</option>
+        </select>
+        <small style="font-style: italic; cursor: pointer; color:blue;" [routerLink]="['/crear-usuario']">Crear nuevo usuario</small>
+    </div>
+    <form [formGroup]="orderForm" (ngSubmit)="sendData()">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Plato</label>
+                    <select class="form-control" formControlName="plato">
+                        <option value="" disabled>Please select...</option>
+                        <option value="plato1">Plato 1</option>
+                        <option value="plato2">Plato 2</option>
+                        <option value="plato3">Plato 3</option>
+                        <option value="plato4">Plato 4</option>
+                        <option value="plato5">Plato 5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Cantidad</label>
+                    <select class="form-control" formControlName="cantidad">
+                        <option value="" disabled>Please select...</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3" *ngIf="platosAgregados.length > 0">
+            <table class="table table-dark">
+                <thead class="thead-inverse">
+                    <tr>
+                        <th>Plato</th>
+                        <th>Cantidad</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let plato of platosAgregados">
+                            <td> {{plato.plato}} </td>
+                            <td> {{plato.cantidad}} </td>
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+        <button class="btn btn-warning" type="submit">Agregar Plato</button>
+    </form>
+    <button class="btn btn-success btn-lg btn-block mt-5" (click)="terminarPedido()">Terminar Pedido</button>
+</div>

@@ -4,6 +4,7 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MenuComponent } from './menu/menu.component';
 import { CreateOrderComponent } from './create-order/create-order.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 const ROUTES: Routes = [
     {
@@ -13,6 +14,7 @@ const ROUTES: Routes = [
             { path: 'dashboard', component: DashboardComponent },
             { path: 'menu', component: MenuComponent },
             { path: 'crear-orden', component: CreateOrderComponent },
+            { path: 'crear-usuario', component: CreateUserComponent },
             { path: '', pathMatch: 'full', redirectTo: 'dashboard' }
         ]
     },
