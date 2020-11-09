@@ -1,1 +1,37 @@
-<p>create-user works!</p>
+<div class="container container-fluid mt-3">
+    <h2>
+        Crear Usuario
+    </h2>
+    <hr>
+    <form [formGroup]="userForm" (ngSubmit)="saveUser()">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" class="form-control" formControlName="nombre">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Apellidos</label>
+                    <input type="text" class="form-control" formControlName="apellidos">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Dirección</label>
+                    <input type="text" class="form-control" formControlName="direccion">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Teléfono</label>
+                    <input type="text" class="form-control" formControlName="telefono">
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-success" type="submit">Crear Usuario</button>
+    </form>
+</div>
